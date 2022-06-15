@@ -1,0 +1,80 @@
+﻿@model WebApplication1.Models.Seminar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <div class="pull-left">
+        <h4>Seminar Details</h4>
+    </div>
+    <div class="pull-right">
+        @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-info" })
+    </div>
+</div>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        
+        <dt>
+            Seminar Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarTitle)
+        </dd>
+
+        <dt>
+            Seminar Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarDescription)
+        </dd>
+
+        <dt>
+            Seminar Type
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarType)
+        </dd>
+
+        <dt>
+            Seminar Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarDate)
+        </dd>
+
+        <dt>
+            Seminar StartTime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarStartTime)
+        </dd>
+
+        <dt>
+            Seminar EndTime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarEndTime)
+        </dd>
+
+        <dt>
+            Created Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SeminarID })    
+</p>

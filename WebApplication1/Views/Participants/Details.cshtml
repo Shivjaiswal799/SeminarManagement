@@ -1,0 +1,72 @@
+﻿@model WebApplication1.Models.ParticipantViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <div class="pull-left">
+        <h4>Participant Details</h4>
+    </div>
+    <div class="pull-right">
+        @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-info" })
+    </div>
+</div>
+<hr />
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Seminar
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarTitle)
+        </dd>
+
+        <dt>
+            Participant Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParticipantName)
+        </dd>
+
+        <dt>
+            Participant Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParticipantEmail)
+        </dd>
+
+        <dt>
+            Participant MobileNo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParticipantMobileNo)
+        </dd>
+
+        <dt>
+            Participant DOB
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParticipantDOB)
+        </dd>
+
+        <dt>
+            Is Attended
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAttended)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ParticipantID })
+</p>

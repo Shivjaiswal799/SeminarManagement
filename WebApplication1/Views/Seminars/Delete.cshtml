@@ -1,0 +1,86 @@
+﻿@model WebApplication1.Models.Seminar
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-heading">
+    <div class="pull-left">
+        <h4>Delete Seminar</h4>
+    </div>
+    <div class="pull-right">
+        @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-info" })
+    </div>
+</div>
+<hr />
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Seminar Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarTitle)
+        </dd>
+
+        <dt>
+            Seminar Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarDescription)
+        </dd>
+
+        <dt>
+            Seminar Type
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarType)
+        </dd>
+
+        <dt>
+            Seminar Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarDate)
+        </dd>
+
+        <dt>
+            Seminar StartTime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarStartTime)
+        </dd>
+
+        <dt>
+            Seminar EndTime
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeminarEndTime)
+        </dd>
+
+        <dt>
+            Created Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />            
+        </div>
+    }
+</div>

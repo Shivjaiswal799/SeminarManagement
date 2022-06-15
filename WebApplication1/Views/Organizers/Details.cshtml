@@ -1,0 +1,54 @@
+﻿@model WebApplication1.Models.Organizer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-heading">
+    <div class="pull-left">
+        <h4>Organizer Details</h4>
+    </div>
+    <div class="pull-right">
+        @Html.ActionLink("Back to List", "Index", new { area = "" }, new { @class = "btn btn-info" })
+    </div>
+</div>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            Organizer Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizerName)
+        </dd>
+
+        <dt>
+            Organizer Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizerEmail)
+        </dd>
+
+        <dt>
+            Organizer MobileNo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizerMobileNo)
+        </dd>
+
+        <dt>
+            Organizer Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizerAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrganizerID })    
+</p>
